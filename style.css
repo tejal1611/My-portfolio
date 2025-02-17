@@ -1,0 +1,357 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins',sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background:black;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+    transform: 0.5s;
+}
+#header
+{
+    width:100%;
+    height:100vh;
+    background-image: url(p.png);
+    background-size:cover;
+    background-position: center;
+
+
+}
+.container{
+    padding:10px 10%;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 45%;
+    
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin :10px 20px;
+
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size:18px;
+    position:relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:red;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header_text{
+    margin-top: 20%;
+    margin-left: 7%;
+    font-size: 30px;
+    justify-content: space-between;
+}
+.header-text h1{
+    font-size:60px;
+    margin-top:20px;
+}
+.header-text h1 span{
+    color: aqua;
+}
+.about{
+    padding:80px 0;
+   
+    display: flex;
+
+}
+.about .col1
+{
+    height:300px;
+    width:200px;
+    float:left;
+    flex-basis: 35%;
+    margin-left: 30px;
+    
+   
+}
+.about .col1 img{
+   width: 100%;
+    border-radius: 30px;
+    height: 450px;
+}
+
+.about .col2{
+    margin-left: 30px;
+    flex-basis: 60% ;
+    margin-right: 15px;
+    color:#ababab;
+}
+.about .col2 h1{
+    margin-bottom: 10px;
+    font-size:60px;
+    color: #fff;
+}
+.about .col2 .sub {
+    display:flex;
+    margin: 20px 0 40px;
+    
+
+}
+.about .col2 .sub .t1{
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.t1::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:red;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+}
+.t1.active::after{
+    width:60%;
+}
+.tcontent span{
+    color: rgb(154, 60, 60);
+}
+.tcontent ul{
+    list-style: none;
+}
+.tcontent{
+display: none;
+}
+.tcontent.activecontent{
+   display: block;
+}
+/* -------------------------services--------------- */
+#services{
+    padding: 30px 0;
+}
+#services  h1{
+    margin-bottom: 10px;
+    font-size:60px;
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 25px;
+    text-align: center;
+}
+#services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}.slist{
+    background-color: #262626;
+    border-radius: 10px;
+    height: 250px;
+    padding: 15px;
+    transition: background 0.5s transform 0.5s ;
+    
+}
+.slist a i{
+    color: #e7dbdf;
+    margin-right: 15px;
+    margin-top: 5px;
+    font-size: 40px;
+    align-items: center;
+    
+}
+.slist h2{
+  
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.slist a{
+ display: inline-block;
+ color: rgb(251, 245, 245);
+ font-size: 12px;
+ margin-top: 10px;
+}
+.slist:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+#portfolio{
+    padding: 30px 0;
+}
+#portfolio h1{
+    margin-bottom: 10px;
+    font-size:60px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: center;
+}
+#portfolio .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+    height: 450px;
+    width: 100%;
+}
+.plist{
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+#portfolio .container .plist{
+   width: 100%;
+   
+   display: block;
+}
+#portfolio .container .plist a i{
+    color: #e7dbdf;
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+#portfolio .container .plist img{
+    transition: transform 0.5s;
+}
+#portfolio .container .plist :hover img{
+    transform: scale(1.1);
+}
+.plist h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.layer{
+    width: 100%;
+    height:0;
+    background: linear-gradient(rgb(0,0,0,0.6),#ff004f);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.plist:hover .layer {
+    height:100%;
+}
+
+
+/* ------------------------CONTACT------------------- */
+#contact .container .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+    width: 100%;
+}
+#contact .container .row h1{
+    margin-bottom: 10px;
+    font-size:60px;
+    color: #fff;
+    margin-top: 10px;
+   
+   
+}
+#contact .col1{
+    flex-basis: 35%;
+    padding-top: 10px;
+
+}
+#contact .col1 p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+}
+#contact .col2{
+    flex-basis: 60%;
+
+}
+.social-icons{
+    margin-top:30px;
+}
+.social-icons a i{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right:15px ;
+    color:#ababab;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition:color 0.5s transform 0.5s;
+
+}
+.social-icons a i:hover{
+    color: #ff004f;
+    transform:translateY(-5px)
+}
+.cv{
+    display: inline-block;
+    background: #ff004f;
+    border-radius: 5px;
+    height: 30px;
+    width:120px;
+    text-decoration: none;
+    margin-right:15px ;
+    color: #fff;
+  text-align: center;
+  padding-top: 4px;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+.col2 form{
+    width:100%;
+}
+form input, form textarea{
+width:100%;
+border:0;outline:0;
+padding:15px;background:#262626;
+margin:15px 0;
+color:#fff;
+font-size: 18px;
+border-radius: 5px;
+}
+.col2 form button{
+    display: inline-block;
+    background: #ff004f;
+    border-radius: 5px;
+    height: 40px;
+    width:120px;
+    text-decoration: none;
+    margin-right:15px ;
+    color: #fff;
+  text-align: center;
+  padding-top: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  
+
+ }
+ .copywrite{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    background:#262626;
+    font-weight: 300;
+    margin-top: 40px;
+ }
